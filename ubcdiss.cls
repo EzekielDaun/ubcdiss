@@ -8,13 +8,13 @@
 %% GPS Thesis Specifications and Formatting Requirements
 %% <https://www.grad.ubc.ca/current-students/dissertation-thesis-preparation/structure-ubc-theses-dissertations>
 %% <https://www.grad.ubc.ca/current-students/dissertation-thesis-preparation/formatting-requirements>
-%% 
+%%
 %% Useful documents:
 %%  * LaTeX2e for class and package writers
 %%    <http://www.latex-project.org/guides/clsguide.pdf>
 %%
 %% This package, and all its contents, are placed in the public domain.
-%% 
+%%
 
 %% Options that can be specified with the documentclass
 %%   balanced         cause text of each page to be centred
@@ -244,34 +244,36 @@
     \pagestyle{empty}	% in case of \cleardoublepage in end-titlepage
     \begin{titlepage}
     \null\vfil\par
-    \begin{center}\setlength{\baselineskip}{20pt}
-        {\Large \textbf{\@title}}\\[1em]
-	\ifx\@subtitle\empty%
-	    \relax
-	\else%
-	    {\large\bfseries\@subtitle}
-	    \vspace{2em}
-	\fi
+    \centerline{\begin{minipage}{0.80\paperwidth}
+        \begin{center}\setlength{\baselineskip}{20pt}
+            {\Large \textbf{\@title}}\\[1em]
+            \ifx\@subtitle\empty%
+            \relax
+            \else%
+            {\large\bfseries\@subtitle}
+            \vspace{2em}
+            \fi
 
-	{\large by}\\[1em]
-	{\large \@author}\\[1em]
-	\ifx\@previousdegrees\empty\relax\else\@previousdegrees\vspace{2em}\fi
+            {\large by}\\[1em]
+            {\large \@author}\\[1em]
+            \ifx\@previousdegrees\empty\relax\else\@previousdegrees\vspace{2em}\fi
 
-	{\Large \textsc{a thesis submitted in partial fulfillment}}\\
-	{\Large \textsc{of the requirements for the degree of}}\\[1em]
+            {\Large \textsc{a thesis submitted in partial fulfillment of}}\\
+            {\Large \textsc{the requirements for the degree of}}\\[1em]
 
-	{\large \textbf{\@degreetitle}}\\[1em]
-	{\large in}\\[1em]
-	{\Large \textsc{\MakeTextLowercase{\f@culty}}}\\
-	\ifx\dep@rtment\empty\relax\else(\dep@rtment)\fi
-	\vspace{1em}
+            {\large \textbf{\@degreetitle}}\\[1em]
+            {\large in}\\[1em]
+            {\Large \textsc{\MakeTextLowercase{\f@culty}}}\\
+            \ifx\dep@rtment\empty\relax\else(\dep@rtment)\fi
+            \vspace{1em}
 
-	{\large \@institution}\\
-	{\large (\c@mpus)}\\[1em]
-	{\large \@submonth\ \@subye@r}\\[1em]
+            {\large \@institution}\\
+            {\large (\c@mpus)}\\[1em]
+            {\large \@submonth\ \@subye@r}\\[1em]
 
-	{\large \textcopyright\ \@author, \@subye@r}
-    \end{center}
+            {\large \textcopyright\ \@author, \@subye@r}
+        \end{center}
+    \end{minipage}}
     \vfill\null
     \end{titlepage}
     \ifgpscopy\setcounter{page}{2}\else\frontmatter\fi
@@ -294,7 +296,7 @@
     and recommend to the Faculty of Graduate and Postdoctoral Studies
     for acceptance, the thesis entitled:\\[1em]
         {\large \textbf{\@title}}\\[1em]
-    submitted by 
+    submitted by
 	\textbf{\@author}
     in partial fulfillment of the requirements for the degree of
 	\textbf{\@degreetitle}
